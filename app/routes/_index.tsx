@@ -3,8 +3,8 @@ import { Hero } from "~/components/hero";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "Ryota Ikezawa" },
+    { name: "description", content: "Welcome to my portfolio." },
   ];
 };
 
