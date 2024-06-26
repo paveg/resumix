@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import { Mail } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -27,18 +28,17 @@ export const Hero = () => {
                 View Portfolio
               </Link>
               <Link
-                to="#"
+                to="mailto:pavegy+work@gmail.com"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch="intent"
               >
+                <Mail className="mr-2" size={16}/>
                 Get in Touch
               </Link>
             </div>
           </div>
           <img
             src="/placeholder.jpeg"
-            width="650"
-            height="650"
             alt="Hero"
             className="mx-auto aspect-[16/9] overflow-hidden rounded-xl object-fit sm:w-full"
           />

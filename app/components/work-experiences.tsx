@@ -14,9 +14,9 @@ type WorkHistory = {
 };
 
 const companyNames = {
-    freee: "freee K.K",
-    acall: "Acall Inc."
-}
+  freee: "freee K.K",
+  acall: "Acall Inc.",
+};
 const histories: WorkHistory[] = [
   {
     period: "Mar 2023 - Present",
@@ -48,21 +48,26 @@ const histories: WorkHistory[] = [
 export const WorkExperiences = () => {
   return (
     <>
-      {histories.map((history) => {
-        return (
-          <Card key={history.period}>
-            <CardHeader>
-              <CardTitle>{history.jobTitle}</CardTitle>
-              <CardDescription>
-                {history.company} | {history.period}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>{history.description}</p>
-            </CardContent>
-          </Card>
-        );
-      })}
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        Work Experience
+      </h2>
+      <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {histories.slice(0, 6).map((history) => {
+          return (
+            <Card key={history.period}>
+              <CardHeader>
+                <CardTitle>{history.jobTitle}</CardTitle>
+                <CardDescription>
+                  {history.company} | {history.period}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>{history.description}</p>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
     </>
   );
 };
